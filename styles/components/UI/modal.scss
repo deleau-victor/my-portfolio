@@ -1,0 +1,9 @@
+.modal-background {
+	@apply absolute inset-0 bg-black/50 z-40;
+	.modal {
+		@apply absolute z-50 top-1/2 left-1/2 bg-[#1b1c1e]  -translate-x-1/2 -translate-y-1/2 p-4 rounded-lg w-160;
+		.head {
+			@apply flex justify-between w-full mb-10;
+		}
+	}
+}

@@ -1,91 +1,52 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+"use client"
 
-const inter = Inter({ subsets: ['latin'] })
+import Button from "../components/UI/button"
+import Image from "next/image"
+import profilePic from "../public/images/pictures/memoji.png"
+import { useState } from "react"
+import ContactForm from "../components/forms/contact/contactForm"
+import Modal from "../components/UI/modal"
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+const Home = () => {
+	const [isContactOpen, setIsContactOpen] = useState<boolean>(false)
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+	return (
+		<>
+			<section className='grid grid-cols-3 place-items-center center'>
+				<div className='space-y-8 col-span-2'>
+					<div className='space-y-8'>
+						<div>
+							<h1>Victor Deleau</h1>
+							<h1>Développeur Web</h1>
+						</div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+						<p>En recherche d'alternance à partir de Janvier 2023</p>
+					</div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+					<div className='flex flex-row gap-4'>
+						<Button
+							variant='outlined'
+							textColor='text-white'
+							borderColor='border-white'
+							onClick={() => setIsContactOpen(true)}>
+							Me contacter
+						</Button>
+						<Button hovered>Télécharger mon CV</Button>
+					</div>
+				</div>
+				<Image
+					src={profilePic}
+					alt='Profile picture'
+					className='border-b-4 border-gray w-full'
+				/>
+				<Modal
+					isOpen={isContactOpen}
+					onClick={() => setIsContactOpen(false)}
+					title='Me contacter'>
+					<ContactForm />
+				</Modal>
+			</section>
+		</>
+	)
 }
+export default Home

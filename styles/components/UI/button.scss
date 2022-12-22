@@ -1,0 +1,32 @@
+.button {
+	@apply inline-flex flex-wrap items-center justify-center h-12 px-4 font-bold rounded-lg duration-200 border-2;
+	&:active {
+		@apply animate-buttonPop;
+	}
+	&.hovered {
+		&:hover {
+			@apply bg-transparent;
+		}
+	}
+	&.outlined {
+		@apply bg-transparent;
+		&:hover {
+			@apply border-primary text-primary;
+		}
+	}
+	&.rounded-xs {
+		@apply h-5 w-5 p-1 rounded-full;
+	}
+	&.xs {
+		@apply h-4 px-2;
+	}
+	&.sm {
+		@apply h-8 px-3;
+	}
+	&.lg {
+		@apply h-16 px-5;
+	}
+	&.xl {
+		@apply h-20 px-6;
+	}
+}

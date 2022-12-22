@@ -1,0 +1,19 @@
+* {
+	@apply text-white text-lg font-avenirLT;
+}
+
+h1 {
+	@apply font-bold font-cambon text-5xl lg:text-6xl xl:text-7xl;
+}
+
+h2 {
+	@apply font-cambon font-bold text-3xl;
+}
+
+h3 {
+	@apply font-cambon font-bold text-xl;
+}
+
+.center {
+	@apply w-[80%] gap-8 justify-items-center relative h-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}

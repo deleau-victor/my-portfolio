@@ -1,0 +1,31 @@
+form {
+	@apply flex flex-col;
+	& > section {
+		@apply grid grid-cols-field gap-y-2 gap-x-6;
+	}
+}
+
+.inputSection {
+	@apply flex flex-col items-center;
+	&.wide {
+		@apply col-span-2;
+	}
+	& > .fieldSection {
+		@apply flex flex-row bg-white/10 backdrop-blur outline-light-gray focus-within:outline outline-2 px-4 py-3 rounded-lg w-full transition-all duration-75;
+		& > .fieldInput {
+			@apply flex flex-col justify-center w-full;
+			& > .fieldComponent {
+				@apply bg-transparent outline-none text-white placeholder:text-light-gray;
+			}
+		}
+		& > .fieldIcon {
+			@apply flex w-8 pl-2;
+		}
+	}
+	& > div:last-child {
+		@apply min-h-[32px] justify-self-start;
+		& > small {
+			@apply text-error;
+		}
+	}
+}
