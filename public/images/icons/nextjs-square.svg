@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.0" width="180.000000pt" height="180.000000pt" viewBox="0 0 180.000000 180.000000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="gradient-2" bx:pinned="true">
+      <stop offset="0" style=""/>
+      <stop offset="1" style="stop-color: rgb(255, 255, 255);"/>
+    </linearGradient>
+    <linearGradient id="gradient-2-0" gradientUnits="userSpaceOnUse" x1="59.7" y1="78.078" x2="59.7" y2="205.842" gradientTransform="matrix(1, 0, 0, 0.978899, 0, 0)" xlink:href="#gradient-2"/>
+    <linearGradient id="gradient-2-1" gradientUnits="userSpaceOnUse" x1="121.051" y1="53.959" x2="121.051" y2="105.41" gradientTransform="matrix(1, 0, 0, 1.097543, 0, -5.263331)" xlink:href="#gradient-2"/>
+  </defs>
+  <rect x="-0.372" y="-0.326" width="180.616" height="181.518" style="fill: rgb(255, 255, 255);" />
+  <rect x="53.6" y="53.822" width="13.4" height="72.2" style=""/>
+  <rect x="53" y="76.431" width="13.4" height="125.068" style="fill: url(#gradient-2-0);" transform="matrix(0.783474, -0.621424, 0.621424, 0.783474, -29.970654, 35.160934)"/>
+  <rect x="59.129" y="53.797" width="10.373" height="11.832" style=""/>
+  <rect x="114.94" y="53.959" width="12.222" height="56.47" style="fill: url(#gradient-2-1);"/>
+</svg>

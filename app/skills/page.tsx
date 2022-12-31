@@ -1,13 +1,54 @@
+"use client"
+
+import { useState, MouseEvent, useEffect } from "react"
+import SkillSection from "../../components/sections/skillSection"
+import skills from "../../skills"
+
+interface Category {
+	name: string
+	icon: string
+}
+
+export interface CategoryGroup {
+	[key: string]: Category[]
+}
+
+export interface Categories {
+	Categories: CategoryGroup[]
+}
+
 const Skills = () => {
 	return (
-		<section className='grid grid-cols-6 place-items-center center'>
-			<h2>Langages</h2>
-			<h2>Front-End</h2>
-			<h2>UI</h2>
-			<h2>Back-End</h2>
-			<h2>Mobile</h2>
-			<h2>Bases de données</h2>
-		</section>
+		<main className='skill'>
+			<h1>Mes compétences</h1>
+			<section>
+				<div>
+					<h2>Langages</h2>
+					<SkillSection list={skills.Categories[0]} />
+				</div>
+				<div>
+					<h2>Front-End</h2>
+					<SkillSection list={skills.Categories[1]} />
+				</div>
+				<div>
+					<h2>Back-End</h2>
+					<SkillSection list={skills.Categories[2]} />
+				</div>
+				<div>
+					<h2>Base&nbsp;de&nbsp;données</h2>
+					<SkillSection list={skills.Categories[5]} />
+				</div>
+
+				<div>
+					<h2>UI</h2>
+					<SkillSection list={skills.Categories[4]} />
+				</div>
+				<div>
+					<h2>Mobile</h2>
+					<SkillSection list={skills.Categories[3]} />
+				</div>
+			</section>
+		</main>
 	)
 }
 

@@ -7,10 +7,10 @@ function SocialBar() {
 	return (
 		<section className='mediaBar'>
 			<a href='https://github.com/deleau-victor' target='_blank'>
-				<Icon src={githubLogo} alt='Logo github' size='lg' />
+				<Icon src={githubLogo} alt='Logo github' size='lg' responsive />
 			</a>
 			<a href='https://www.linkedin.com/in/victor-deleau/' target='_blank'>
-				<Icon src={linkedinIcon} alt='Logo linkedin' size='lg' />
+				<Icon src={linkedinIcon} alt='Logo linkedin' size='lg' responsive />
 			</a>
 		</section>
 	)

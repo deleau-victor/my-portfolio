@@ -6,9 +6,9 @@
 body {
 	&:before {
 		content: "";
-		@apply absolute inset-0 bg-main bg-cover bg-center brightness-[.4] -z-10;
+		@apply absolute inset-0 bg-main bg-cover bg-center brightness-[.3] -z-10;
 	}
-	@apply absolute inset-0 z-0 backdrop-blur-sm;
+	@apply absolute inset-0 z-0 backdrop-blur-md overflow-hidden;
 }
 
 @layer components {
@@ -17,4 +17,16 @@ body {
 
 @layer base {
 	@import "base";
+}
+
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }
