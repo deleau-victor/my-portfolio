@@ -68,6 +68,10 @@ const skills: Categories = {
 					name: "SASS",
 					icon: "/images/icons/SASS.svg",
 				},
+				{
+					name: "NativeBase",
+					icon: "/images/icons/nativeBase.svg",
+				},
 			],
 		},
 		{
