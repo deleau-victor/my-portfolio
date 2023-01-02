@@ -8,7 +8,7 @@ body {
 		content: "";
 		@apply absolute inset-0 bg-main bg-cover bg-center brightness-[.3] -z-10;
 	}
-	@apply absolute inset-0 z-0 backdrop-blur-md overflow-hidden;
+	@apply absolute inset-0 z-0 backdrop-blur-md overflow-hidden select-none;
 }
 
 @layer components {

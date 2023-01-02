@@ -4,19 +4,6 @@ import { useState, MouseEvent, useEffect } from "react"
 import SkillSection from "../../components/sections/skillSection"
 import skills from "../../skills"
 
-interface Category {
-	name: string
-	icon: string
-}
-
-export interface CategoryGroup {
-	[key: string]: Category[]
-}
-
-export interface Categories {
-	Categories: CategoryGroup[]
-}
-
 const Skills = () => {
 	return (
 		<main className='skill'>

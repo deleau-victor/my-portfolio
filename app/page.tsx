@@ -42,7 +42,8 @@ const Home = () => {
 				<Modal
 					isOpen={isContactOpen}
 					onClick={() => setIsContactOpen(false)}
-					title='Me contacter'>
+					title='Me contacter'
+					size='lg'>
 					<ContactForm />
 				</Modal>
 			</section>
