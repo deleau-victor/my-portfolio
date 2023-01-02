@@ -14,7 +14,13 @@ type ModalProps = {
 	size?: "xs" | "sm" | "lg" | "xl"
 }
 
-const Modal: FC<ModalProps> = ({ isOpen, onClick, children, title, size }) => {
+const Modal: FC<ModalProps> | null = ({
+	isOpen,
+	onClick,
+	children,
+	title,
+	size,
+}) => {
 	const handleClick = (event: React.MouseEvent) => {
 		if (event.target === event.currentTarget) {
 			onClick()
@@ -53,7 +59,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClick, children, title, size }) => {
 			document.body,
 		)
 	}
-	return <div></div>
+	return null
 }
 
 export default Modal
