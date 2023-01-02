@@ -21,32 +21,39 @@ const Modal: FC<ModalProps> = ({ isOpen, onClick, children, title, size }) => {
 		}
 	}
 
-	return createPortal(
-		<>
-			{isOpen && (
-				<div
-					className='modal-background'
-					onClick={(event) => handleClick(event)}>
-					<div className={`modal ${size}`}>
-						<div className='head'>
-							<>
-								{typeof title === "string" ? <h2>{title}</h2> : title}
-								<Button
-									onClick={onClick}
-									rounded='rounded-xs'
-									bgColor='bg-error'
-									borderColor='border-error'>
-									<Icon src={crossArrow} alt='cross' size='xs' />
-								</Button>
-							</>
+	if (typeof document !== "undefined") {
+		return createPortal(
+			<>
+				{isOpen && (
+					<div
+						className='modal-background'
+						onClick={(event) => handleClick(event)}>
+						<div className={`modal ${size}`}>
+							<div className='head'>
+								<>
+									{typeof title === "string" ? (
+										<h2>{title}</h2>
+									) : (
+										title
+									)}
+									<Button
+										onClick={onClick}
+										rounded='rounded-xs'
+										bgColor='bg-error'
+										borderColor='border-error'>
+										<Icon src={crossArrow} alt='cross' size='xs' />
+									</Button>
+								</>
+							</div>
+							{children}
 						</div>
-						{children}
 					</div>
-				</div>
-			)}
-		</>,
-		document.body,
-	)
+				)}
+			</>,
+			document.body,
+		)
+	}
+	return <div></div>
 }
 
 export default Modal
