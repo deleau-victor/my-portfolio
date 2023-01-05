@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, MouseEvent, useEffect } from "react"
-import SkillSection from "../../components/sections/skillSection"
+import SkillSection from "../../components/sections/skills/skillSection"
 import skills from "../../skills"
 
 const Skills = () => {

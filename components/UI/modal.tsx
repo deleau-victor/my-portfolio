@@ -1,6 +1,6 @@
 "use client"
 
-import React, { FC, useEffect, useState } from "react"
+import React from "react"
 import Button from "./button"
 import Icon from "./icon"
 import crossArrow from "../../public/images/icons/cross.svg"
@@ -14,50 +14,41 @@ type ModalProps = {
 	size?: "xs" | "sm" | "lg" | "xl"
 }
 
-const Modal: FC<ModalProps> | null = ({
-	isOpen,
-	onClick,
-	children,
-	title,
-	size,
-}) => {
+const Modal = ({ isOpen, onClick, children, title, size }: ModalProps) => {
 	const handleClick = (event: React.MouseEvent) => {
 		if (event.target === event.currentTarget) {
 			onClick()
 		}
 	}
 
-	if (typeof document !== "undefined") {
-		return createPortal(
-			<>
-				{isOpen && (
-					<div
-						className='modal-background'
-						onClick={(event) => handleClick(event)}>
-						<div className={`modal ${size}`}>
-							<div className='head'>
-								<>
-									{typeof title === "string" ? (
-										<h2>{title}</h2>
-									) : (
-										title
-									)}
-									<Button
-										onClick={onClick}
-										rounded='rounded-xs'
-										bgColor='bg-error'
-										borderColor='border-error'>
-										<Icon src={crossArrow} alt='cross' size='xs' />
-									</Button>
-								</>
-							</div>
-							{children}
+	const content = (
+		<>
+			{isOpen && (
+				<div
+					className='modal-background'
+					onClick={(event) => handleClick(event)}>
+					<div className={`modal ${size}`}>
+						<div className='head'>
+							<>
+								{typeof title === "string" ? <h2>{title}</h2> : title}
+								<Button
+									onClick={onClick}
+									rounded='rounded-xs'
+									bgColor='bg-error'
+									borderColor='border-error'>
+									<Icon src={crossArrow} alt='cross' size='xs' />
+								</Button>
+							</>
 						</div>
+						{children}
 					</div>
-				)}
-			</>,
-			document.body,
-		)
+				</div>
+			)}
+		</>
+	)
+
+	if (typeof document !== "undefined") {
+		return createPortal(content, document.body)
 	}
 	return null
 }

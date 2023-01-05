@@ -15,7 +15,7 @@
 			}
 			& > .skillList {
 				@apply flex flex-col mt-4 lg:mt-6 xl:mt-10 gap-2 items-center;
-				& > div {
+				& > div > div {
 					@apply flex items-center w-full justify-between p-4 cursor-pointer;
 					&:hover {
 						@apply bg-secondary-transparent rounded-lg;

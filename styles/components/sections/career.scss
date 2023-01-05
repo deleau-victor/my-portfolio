@@ -1,0 +1,6 @@
+.career {
+	@apply w-full h-[calc(100%-85.5px)] flex flex-col items-center relative;
+	& > div {
+		@apply absolute w-full border-2 border-dashed border-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+	}
+}

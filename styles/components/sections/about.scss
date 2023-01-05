@@ -1,0 +1,57 @@
+.about {
+	@apply flex flex-col items-center h-[calc(100vh-85.5px)];
+
+	& > section {
+		@apply flex flex-col items-center lg:grid lg:grid-cols-2 gap-12 w-[90%] mx-auto mt-8 pb-4 mb-4 overflow-y-scroll no-scrollbar;
+		& > article {
+			&:first-child {
+				@apply flex flex-col gap-6;
+				& > div {
+					@apply flex flex-col gap-4;
+				}
+			}
+			&:nth-child(2) {
+				@apply flex flex-col gap-6 items-center;
+				& > img {
+					@apply w-80 rounded-full;
+				}
+				& > div {
+					@apply flex flex-col gap-4;
+					& > a {
+						@apply flex items-center gap-4;
+					}
+				}
+			}
+			&:nth-child(3) {
+				@apply flex flex-col gap-4 items-center col-span-2 text-center;
+			}
+			&:nth-child(5) {
+				@apply flex flex-col gap-4 place-self-stretch;
+				& > iframe {
+					@apply h-112 lg:h-full;
+				}
+			}
+			&:nth-child(6) {
+				@apply flex flex-col gap-4;
+				& > div {
+					@apply grid grid-cols-3 gap-8;
+					& > img {
+						@apply rounded-lg;
+					}
+				}
+			}
+			&:nth-child(7) {
+				@apply flex flex-col gap-4;
+				& > ul {
+					@apply flex flex-col gap-2;
+					& > li {
+						@apply flex gap-4;
+					}
+				}
+			}
+		}
+		& > h2 {
+			@apply col-span-2 text-center;
+		}
+	}
+}

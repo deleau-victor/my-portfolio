@@ -2,12 +2,13 @@ import React, { FC } from "react"
 
 type buttonProps = {
 	children: string | JSX.Element
-	variant?: "outlined"
+	variant?: "outlined" | "ghost"
 	textColor?: "text-white" | "text-primary"
 	bgColor?: "bg-white" | "bg-primary" | "bg-error"
 	borderColor?: "border-white" | "border-primary" | "border-error"
 	size?: "xs" | "sm" | "lg" | "xl"
 	rounded?: "rounded-xs" | "rounded-sm" | "rounded-lg" | "rounded-xl"
+	classname?: string
 	hovered?: boolean
 	onClick?: () => void
 }
@@ -21,6 +22,7 @@ const Button: FC<buttonProps> = ({
 	size,
 	rounded,
 	hovered,
+	classname,
 	onClick,
 }) => {
 	return (
@@ -29,7 +31,7 @@ const Button: FC<buttonProps> = ({
 				variant === "outlined" ? "" : bgColor
 			} ${borderColor} ${size ? size : ""} ${rounded ? rounded : ""} ${
 				hovered ? "hovered" : ""
-			}`}
+			} ${classname ? classname : ""}`}
 			onClick={() => onClick!()}>
 			{children}
 		</button>

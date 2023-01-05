@@ -47,6 +47,7 @@ module.exports = {
 				secondary: "#004947",
 				"on-secondary": "#FFFFFF",
 				"secondary-transparent": "#e1625314",
+				"secondary-transparent-darker": "#9F2F1914",
 				"on-secondary-transparent": "#E16253",
 				background: "#FFFFFF",
 				"on-background": "#003938",
@@ -66,6 +67,9 @@ module.exports = {
 			},
 			gridTemplateColumns: {
 				field: "repeat(2, minmax(320px, 1fr))",
+			},
+			gridTemplateRows: {
+				skill: "1fr 4fr 1fr 1fr",
 			},
 		},
 	},

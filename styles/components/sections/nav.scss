@@ -1,7 +1,7 @@
 nav {
-	@apply text-white flex justify-center items-center gap-4 py-4 top-0 sticky w-full z-30;
+	@apply text-white flex justify-end md:justify-center items-center gap-4 py-4 top-0 sticky w-full z-30 h-[85.5px];
 	& > a {
-		@apply block py-2 px-3 relative font-avenirLT;
+		@apply hidden md:block py-2 px-3 relative font-avenirLT;
 		&:after {
 			content: "";
 			@apply block absolute bottom-0 bg-white h-0.5 left-1/2 right-1/2 transition-all;
@@ -10,4 +10,47 @@ nav {
 			@apply left-3 right-3;
 		}
 	}
+	&.open {
+		@apply absolute top-5 flex flex-col-reverse  items-center gap-4 bg-black/50 h-fit w-3/4 left-1/2 -translate-x-1/2 p-4 rounded-2xl backdrop-blur-md;
+		& > a {
+			@apply block;
+			&:nth-child(1) {
+				@apply order-5;
+			}
+			&:nth-child(2) {
+				@apply order-4;
+			}
+			&:nth-child(3) {
+				@apply order-3;
+			}
+			&:nth-child(4) {
+				@apply order-2;
+			}
+			&:nth-child(5) {
+				@apply order-1;
+			}
+		}
+	}
+	& > button:first-of-type {
+		display: inline-flex !important;
+		&.open {
+			display: none !important;
+		}
+	}
+	& > button:last-child {
+		display: inline-flex !important;
+		@apply absolute right-2 top-0;
+		&.open {
+			display: none !important;
+		}
+	}
+	& > button:first-of-type {
+		@media (min-width: 768px) {
+			display: none !important;
+		}
+	}
+}
+
+.noDisform {
+	@apply h-[85.5px] w-full;
 }

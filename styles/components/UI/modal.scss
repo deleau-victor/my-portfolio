@@ -1,21 +1,21 @@
 .modal-background {
 	@apply absolute inset-0 bg-black/50 z-40;
 	.modal {
-		@apply absolute z-50 top-1/2 left-1/2 bg-[#1b1c1e]  -translate-x-1/2 -translate-y-1/2 p-4 rounded-lg w-128;
+		@apply absolute z-50 top-1/2 left-1/2 bg-[#1b1c1e]  -translate-x-1/2 -translate-y-1/2 p-4 rounded-lg w-56 md:w-72 lg:w-96 xl:w-128;
 		.head {
 			@apply flex justify-between w-full mb-10;
 		}
 		&.xs {
-			@apply w-80;
+			@apply w-32 md:w-48 lg:w-64 xl:w-80;
 		}
 		&.sm {
-			@apply w-112;
+			@apply w-48 md:w-72 lg:w-96 xl:w-112;
 		}
 		&.lg {
-			@apply w-160;
+			@apply w-64 md:w-96 lg:w-128 xl:w-160;
 		}
 		&.xl {
-			@apply w-192;
+			@apply w-72 md:w-112 lg:w-160 xl:w-192;
 		}
 	}
 }

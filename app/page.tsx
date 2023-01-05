@@ -2,7 +2,7 @@
 
 import Button from "../components/UI/button"
 import Image from "next/image"
-import profilePic from "../public/images/pictures/memoji.png"
+import profilePic from "../public/images/pictures/photo.png"
 import { useState } from "react"
 import ContactForm from "../components/forms/contact/contactForm"
 import Modal from "../components/UI/modal"
@@ -12,9 +12,9 @@ const Home = () => {
 
 	return (
 		<>
-			<section className='grid grid-cols-3 place-items-center center'>
-				<div className='space-y-8 col-span-2'>
-					<div className='space-y-8'>
+			<section className='home'>
+				<div>
+					<div>
 						<div>
 							<h1>Victor Deleau</h1>
 							<h1>Développeur Web</h1>
@@ -23,7 +23,7 @@ const Home = () => {
 						<p>En recherche d'alternance à partir de Janvier 2023</p>
 					</div>
 
-					<div className='flex flex-row gap-4'>
+					<div>
 						<Button
 							variant='outlined'
 							textColor='text-white'
@@ -34,11 +34,7 @@ const Home = () => {
 						<Button hovered>Télécharger mon CV</Button>
 					</div>
 				</div>
-				<Image
-					src={profilePic}
-					alt='Profile picture'
-					className='border-b-4 border-gray w-full'
-				/>
+				<Image src={profilePic} alt='Profile picture' />
 				<Modal
 					isOpen={isContactOpen}
 					onClick={() => setIsContactOpen(false)}

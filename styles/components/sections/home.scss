@@ -1,0 +1,16 @@
+.home {
+	@apply flex flex-col-reverse items-center lg:grid lg:grid-cols-3 lg:place-items-center center;
+	& > div:first-child {
+		@apply space-y-8 col-span-2;
+		& > div:first-child {
+			@apply space-y-8;
+		}
+		& > div:last-child {
+			@apply flex flex-row gap-4;
+		}
+	}
+
+	& > img {
+		@apply w-1/2 lg:w-full rounded-full;
+	}
+}
