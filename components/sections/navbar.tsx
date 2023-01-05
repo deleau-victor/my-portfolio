@@ -14,11 +14,21 @@ const Navbar: FC<navbarProps> = () => {
 		<>
 			<div className={isMenuOpen ? "noDisform" : ""}></div>
 			<nav className={isMenuOpen ? "open" : ""}>
-				<Link href='/'>Accueil</Link>
-				<Link href='/about'>A&nbsp;propos</Link>
-				<Link href='/skills'>Compétences</Link>
-				<Link href='/projects'>Projets</Link>
-				<Link href='/career'>Parcours</Link>
+				<Link href='/' onClick={() => setIsMenuOpen(false)}>
+					Accueil
+				</Link>
+				<Link href='/about' onClick={() => setIsMenuOpen(false)}>
+					A&nbsp;propos
+				</Link>
+				<Link href='/skills' onClick={() => setIsMenuOpen(false)}>
+					Compétences
+				</Link>
+				<Link href='/projects' onClick={() => setIsMenuOpen(false)}>
+					Projets
+				</Link>
+				<Link href='/career' onClick={() => setIsMenuOpen(false)}>
+					Parcours
+				</Link>
 				<Button
 					variant='ghost'
 					classname={isMenuOpen ? "open" : ""}
