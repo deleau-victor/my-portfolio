@@ -1,6 +1,7 @@
 import "../styles/globals.scss"
 import Navbar from "../components/sections/navbar"
 import SocialBar from "../components/sections/socialBar"
+import { AnalyticsWrapper } from "../components/analytics"
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
@@ -10,6 +11,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 				<Navbar />
 				{children}
 				<SocialBar />
+				<AnalyticsWrapper />
 			</body>
 		</html>
 	)
