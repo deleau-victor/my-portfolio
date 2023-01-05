@@ -16,8 +16,11 @@ const Home = () => {
 				<div>
 					<div>
 						<div>
-							<h1>Victor Deleau</h1>
-							<h1>Développeur Web</h1>
+							<h1>
+								Victor Deleau
+								<br />
+								Développeur Web
+							</h1>
 						</div>
 
 						<p>En recherche d'alternance à partir de Janvier 2023</p>

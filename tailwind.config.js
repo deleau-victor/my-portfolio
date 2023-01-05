@@ -69,7 +69,7 @@ module.exports = {
 				field: "repeat(2, minmax(320px, 1fr))",
 			},
 			gridTemplateRows: {
-				skill: "1fr 4fr 1fr 1fr",
+				skill: "0.2fr 0.1fr 0.4fr 0.2fr 0.1fr",
 			},
 		},
 	},

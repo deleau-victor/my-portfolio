@@ -1,5 +1,5 @@
 .skill {
-	@apply flex flex-col items-center w-[90%] mx-auto pb-4;
+	@apply flex flex-col items-center w-[90%] mx-auto;
 	height: calc(100% - 85.5px);
 
 	& > h1 {

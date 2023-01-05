@@ -4,6 +4,7 @@ import Image from "next/image"
 import Button from "../../UI/button"
 import Modal from "../../UI/modal"
 import { IFilters } from "../../../filters"
+import Icon from "../../UI/icon"
 
 type ProjectsSectionProps = {
 	selectedProjects: IProjects[]
@@ -19,8 +20,7 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({
 	const heightStyle = async (event: SyntheticEvent<HTMLElement, Event>) => {
 		let height =
 			event.currentTarget.parentElement!.children[0].clientHeight +
-			event.currentTarget.parentElement!.children[1].clientHeight +
-			85.5
+			event.currentTarget.parentElement!.children[1].clientHeight
 		event.currentTarget.setAttribute(
 			"style",
 			`height: calc(100% - ${height}px);`,
@@ -42,6 +42,15 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({
 					return (
 						<div key={name + id.toString()}>
 							<h2>{name}</h2>
+							<div>
+								{langages.map((id) =>
+									filters
+										.filter((langage) => langage.id === id)
+										.map(({ icon, name }, key) => (
+											<Icon src={icon} alt={`logo ${name}`} />
+										)),
+								)}
+							</div>
 							<div>
 								{desktopImage && (
 									<Image
@@ -67,10 +76,12 @@ const ProjectsSection: FC<ProjectsSectionProps> = ({
 								onClick={() => setisModalOpen(id)}>
 								Plus d'informations
 							</Button>
-							{link && (
+							{link ? (
 								<a href={link} target='_blank'>
 									Visiter le site &gt;
 								</a>
+							) : (
+								<div></div>
 							)}
 							<Modal
 								isOpen={isModalOpen === id ? true : false}

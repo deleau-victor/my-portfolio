@@ -1,5 +1,5 @@
 .projects {
-	@apply flex flex-col items-center w-[90%] h-[calc(100%-85.5px)] mx-auto pb-4;
+	@apply flex flex-col items-center w-[90%] h-[calc(100%-85.5px)] mx-auto;
 	& > h1 {
 		@apply pb-4;
 	}
@@ -21,7 +21,10 @@
 			& > * {
 				@apply place-self-center;
 			}
-			& > div {
+			& > div:nth-child(2) {
+				@apply flex gap-4;
+			}
+			& > div:nth-child(3) {
 				@apply relative flex justify-center items-center mt-4 w-[313.2px] h-[259.4px];
 				& > img:first-child {
 					@apply relative;
