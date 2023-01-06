@@ -34,7 +34,9 @@ const Home = () => {
 							onClick={() => setIsContactOpen(true)}>
 							Me contacter
 						</Button>
-						<Button hovered>Télécharger mon CV</Button>
+						<Button hovered onClick={() => {}}>
+							Télécharger mon CV
+						</Button>
 					</div>
 				</div>
 				<Image src={profilePic} alt='Profile picture' />

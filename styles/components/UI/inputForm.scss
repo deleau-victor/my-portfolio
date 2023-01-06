@@ -1,19 +1,22 @@
 form {
 	@apply flex flex-col;
 	& > section {
-		@apply grid grid-cols-field gap-y-2 gap-x-6;
+		@apply grid grid-cols-1 lg:grid-cols-field gap-y-2 gap-x-6;
+		& > button:last-child {
+			@apply lg:col-span-2;
+		}
 	}
 }
 
 .inputSection {
 	@apply flex flex-col items-center;
 	&.wide {
-		@apply col-span-2;
+		@apply lg:col-span-2;
 	}
 	& > .fieldSection {
 		@apply flex flex-row bg-white/10 backdrop-blur outline-light-gray focus-within:outline outline-2 px-4 py-3 rounded-lg w-full transition-all duration-75;
 		& > .fieldInput {
-			@apply flex flex-col justify-center w-full;
+			@apply flex flex-col justify-center w-[calc(100%-2rem)];
 			& > .fieldComponent {
 				@apply bg-transparent outline-none text-white placeholder:text-light-gray;
 			}

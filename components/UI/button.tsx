@@ -10,7 +10,8 @@ type buttonProps = {
 	rounded?: "rounded-xs" | "rounded-sm" | "rounded-lg" | "rounded-xl"
 	classname?: string
 	hovered?: boolean
-	onClick?: () => void
+	onClick: () => void
+	type?: "button" | "submit" | "reset"
 }
 
 const Button: FC<buttonProps> = ({
@@ -24,6 +25,7 @@ const Button: FC<buttonProps> = ({
 	hovered,
 	classname,
 	onClick,
+	type = "button",
 }) => {
 	return (
 		<button
@@ -32,7 +34,8 @@ const Button: FC<buttonProps> = ({
 			} ${borderColor} ${size ? size : ""} ${rounded ? rounded : ""} ${
 				hovered ? "hovered" : ""
 			} ${classname ? classname : ""}`}
-			onClick={() => onClick!()}>
+			onClick={() => onClick()}
+			type={type}>
 			{children}
 		</button>
 	)
