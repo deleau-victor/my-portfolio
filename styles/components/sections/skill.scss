@@ -34,12 +34,12 @@
 .skillModalhead {
 	@apply flex items-center justify-between;
 	& > h2 {
-		@apply ml-4 font-avenirLT;
+		@apply ml-4;
 	}
 }
 
 .skillModal {
 	& > h3 {
-		@apply font-avenirLT mb-4;
+		@apply mb-4;
 	}
 }
