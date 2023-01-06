@@ -21,6 +21,7 @@
 ### 🧰 Frontend
 
 [Formik](https://formik.org/) : Gestion des formulaires avec validation complexe
+
 [Yup](https://www.npmjs.com/package/yup) : Utilisation des schéma de validation d'objet pour les formulaires
 
 ### ⚙️ Backend
