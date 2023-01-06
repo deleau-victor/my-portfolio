@@ -7,6 +7,12 @@
 		}
 		& > div:last-child {
 			@apply flex flex-row gap-4;
+			& > button:last-child {
+				@apply p-0;
+				& > a {
+					@apply w-full h-full px-4 inline-flex justify-center items-center;
+				}
+			}
 		}
 	}
 

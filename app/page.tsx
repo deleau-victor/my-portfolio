@@ -6,6 +6,7 @@ import profilePic from "../public/images/pictures/photo.png"
 import { useState } from "react"
 import ContactForm from "../components/forms/contact/contactForm"
 import Modal from "../components/UI/modal"
+import Link from "next/link"
 
 const Home = () => {
 	const [isContactOpen, setIsContactOpen] = useState<boolean>(false)
@@ -35,7 +36,9 @@ const Home = () => {
 							Me contacter
 						</Button>
 						<Button hovered onClick={() => {}}>
-							Télécharger mon CV
+							<a href='/CV.pdf' download='CV - deleau victor.pdf'>
+								Télécharger mon CV
+							</a>
 						</Button>
 					</div>
 				</div>
