@@ -2,7 +2,7 @@
 	@apply flex flex-col items-center h-[calc(100vh-85.5px)];
 
 	& > section {
-		@apply flex flex-col items-center lg:grid lg:grid-cols-2 gap-12 w-[90%] mx-auto mt-8 pb-4 overflow-y-scroll no-scrollbar;
+		@apply flex flex-col items-center lg:grid lg:grid-cols-2 gap-12 w-[90%] mx-auto mt-8 pb-8 overflow-y-scroll no-scrollbar;
 		& > article {
 			&:first-child {
 				@apply flex flex-col gap-6;
