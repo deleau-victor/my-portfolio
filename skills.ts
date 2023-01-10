@@ -80,7 +80,7 @@ const skills: Categories = {
 					],
 				},
 				{
-					name: 'Gastby',
+					name: 'Gatsby',
 					icon: '/images/icons/Frameworks Front/gastby.svg',
 					skills: ['Static site generation', 'Composants SEO'],
 				},
