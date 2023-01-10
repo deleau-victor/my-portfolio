@@ -7,7 +7,7 @@ export interface IFilters {
 const filters: IFilters[] = [
 	{
 		name: 'TypeScript',
-		icon: '/images/icons/typescript.svg',
+		icon: '/images/icons/Dev Skills/typescript.svg',
 		id: 1,
 	},
 	{ name: 'React', icon: '/images/icons/Frameworks Front/react.svg', id: 2 },
