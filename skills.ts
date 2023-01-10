@@ -101,7 +101,13 @@ const skills: Categories = {
 				{
 					name: 'NestJS',
 					icon: '/images/icons/Frameworks Back/nestjs.svg',
-					skills: ["Cration d'API rest", "Création d'API Rest"],
+					skills: [
+						"Cration d'API rest",
+						"Création d'API GraphQL",
+						'Authentification par JWT',
+						"Module d'authentification",
+						'Modèle MVC',
+					],
 				},
 				{
 					name: 'GraphQL',
@@ -128,7 +134,7 @@ const skills: Categories = {
 				{
 					name: 'React Native',
 					icon: '/images/icons/Frameworks Front/react.svg',
-					skills: [''],
+					skills: ["Développement d'applications mobiles"],
 				},
 			],
 		},
@@ -161,12 +167,12 @@ const skills: Categories = {
 				{
 					name: 'PostgreSQL',
 					icon: '/images/icons/Database/PostgreSQL.svg',
-					skills: ['Requêtes SQL', 'Relations entre tables'],
+					skills: ['Requêtes SQL', 'Création de tables', 'Création de vues'],
 				},
 				{
 					name: 'MongoDB',
 					icon: '/images/icons/Database/mongodb.svg',
-					skills: [''],
+					skills: ['Création de collections', 'Requêtes NoSQL'],
 				},
 			],
 		},
