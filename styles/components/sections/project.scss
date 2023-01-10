@@ -5,11 +5,25 @@
 	}
 	// Filtres
 	& > section:first-of-type {
-		@apply flex items-center justify-center gap-2 mt-4 flex-wrap;
+		@apply flex flex-col items-center justify-center gap-2 mt-4 flex-wrap;
+		& > button {
+			@apply md:hidden -mb-8 text-sm;
+		}
 		& > div {
-			@apply flex items-center gap-2 px-2 py-1 bg-secondary-transparent cursor-pointer rounded-lg;
-			&.selected {
-				@apply bg-[#dd898027];
+			@apply flex items-center justify-center gap-2 mt-4 flex-wrap;
+			& > div {
+				@apply md:flex items-center gap-2 px-2 py-1 bg-secondary-transparent cursor-pointer rounded-lg hidden;
+				&.selected {
+					@apply bg-[#dd898027];
+				}
+			}
+		}
+		&.filter {
+			& > button {
+				@apply mb-0;
+			}
+			& > div > div {
+				@apply flex;
 			}
 		}
 	}
