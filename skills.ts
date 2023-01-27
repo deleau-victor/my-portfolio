@@ -175,6 +175,11 @@ const skills: Categories = {
 					],
 				},
 				{
+					name: "Styled Components",
+					icon: "/images/icons/UI/styled-components.svg",
+					skills: ["Création de composants stylisés"],
+				},
+				{
 					name: "SASS",
 					icon: "/images/icons/UI/sass.svg",
 					skills: ["Variables, Mixins"],
