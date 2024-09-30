@@ -1,0 +1,512 @@
+/* **************************** */
+/* *********** MAIN *********** */
+/* **************************** */
+
+:root {
+   font-family: 'Spiegel';
+   line-height: 1.5;
+   font-weight: 400;
+
+   color-scheme: light dark;
+   color: rgba(255, 255, 255, 0.87);
+   background-color: #242424;
+
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-text-size-adjust: 100%;
+
+   --light: #f9f9f9;
+   --dark: #242424;
+   --danger: #fa2255;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Spiegel';
+}
+
+body {
+   margin: 0;
+   /* display: flex; */
+   place-items: center;
+   min-width: 320px;
+   min-height: 100vh;
+}
+
+/* ******************************* */
+/* *********** HEADING *********** */
+/* ******************************* */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'BeaufortForLOL';
+}
+
+/* *********** H1 *********** */
+h1 {
+   font-size: 4rem;
+   line-height: 1.1;
+   font-weight: 700;
+}
+@media screen and (max-width: 1440px) {
+   h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+   }
+}
+@media screen and (max-width: 1024px) {
+   h1 {
+      font-size: 2.75rem;
+      line-height: 1.1;
+   }
+}
+@media screen and (max-width: 768px) {
+   h1 {
+      font-size: 2.5rem;
+      line-height: 1.1;
+   }
+}
+@media screen and (max-width: 425px) {
+   h1 {
+      font-size: 2.25rem;
+      line-height: 1.1;
+   }
+}
+@media screen and (max-width: 375px) {
+   h1 {
+      font-size: 2rem;
+      line-height: 1.1;
+   }
+}
+
+/* *********** H2 *********** */
+h2 {
+   font-size: 2.75rem;
+   line-height: 1.2;
+   font-weight: 600;
+}
+@media screen and (max-width: 1440px) {
+   h2 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+   }
+}
+@media screen and (max-width: 1024px) {
+   h2 {
+      font-size: 2.25rem;
+      line-height: 1.2;
+   }
+}
+@media screen and (max-width: 768px) {
+   h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+   }
+}
+@media screen and (max-width: 425px) {
+   h2 {
+      font-size: 1.75rem;
+      line-height: 1.2;
+   }
+}
+@media screen and (max-width: 375px) {
+   h2 {
+      font-size: 1.5rem;
+      line-height: 1.2;
+   }
+}
+
+/* *********** H3 *********** */
+h3 {
+   font-size: 2.5rem;
+   line-height: 1.3;
+   font-weight: 600;
+}
+@media screen and (max-width: 1440px) {
+   h3 {
+      font-size: 2.25rem;
+      line-height: 1.3;
+   }
+}
+@media screen and (max-width: 1024px) {
+   h3 {
+      font-size: 2rem;
+      line-height: 1.3;
+   }
+}
+@media screen and (max-width: 768px) {
+   h3 {
+      font-size: 1.75rem;
+      line-height: 1.3;
+   }
+}
+@media screen and (max-width: 425px) {
+   h3 {
+      font-size: 1.5rem;
+      line-height: 1.3;
+   }
+}
+@media screen and (max-width: 375px) {
+   h3 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+   }
+}
+
+/* *********** H4 *********** */
+h4 {
+   font-size: 2.25rem;
+   line-height: 1.4;
+   font-weight: 500;
+}
+@media screen and (max-width: 1440px) {
+   h4 {
+      font-size: 2rem;
+      line-height: 1.4;
+   }
+}
+@media screen and (max-width: 1024px) {
+   h4 {
+      font-size: 1.75rem;
+      line-height: 1.4;
+   }
+}
+@media screen and (max-width: 768px) {
+   h4 {
+      font-size: 1.5rem;
+      line-height: 1.4;
+   }
+}
+@media screen and (max-width: 425px) {
+   h4 {
+      font-size: 1.25rem;
+      line-height: 1.4;
+   }
+}
+@media screen and (max-width: 375px) {
+   h4 {
+      font-size: 1rem;
+      line-height: 1.4;
+   }
+}
+
+/* **************************** */
+/* *********** LIST *********** */
+/* **************************** */
+
+ul {
+   list-style: none;
+}
+
+li {
+   display: list-item;
+}
+
+/* ******************************************* */
+/* *********** INTERACTIVE ELEMENT *********** */
+/* ******************************************* */
+
+/* *********** LINK *********** */
+a {
+   font-weight: 500;
+   color: var(--light);
+   text-decoration: inherit;
+   width: fit-content;
+}
+a:hover {
+   color: var(--light);
+}
+
+/* *********** BUTTON *********** */
+button {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: fit-content;
+   gap: 1rem;
+   border-radius: 8px;
+   border: none;
+   font-size: 1em;
+   font-weight: 500;
+   font-family: inherit;
+   cursor: pointer;
+   transition: border-color 0.25s;
+   padding: 0.5rem 1rem;
+}
+
+/* *********** INPUT *********** */
+input {
+   appearance: none;
+   display: inline-flex;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: var(--dark) 000;
+   transition: background-color 5000s ease-in-out 0s;
+   box-shadow: inset 0 0 20px 20px var(--light);
+}
+
+/* ***************************** */
+/* *********** FONTS *********** */
+/* ***************************** */
+
+/* Montserrat font */
+/*
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 100;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 100;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-ThinItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 200;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 200;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-ExtraLightItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 300;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 300;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-Italic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 500;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 600;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 600;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 800;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 800;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 900;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 900;
+   font-display: swap;
+   src: url('../Fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype');
+}
+
+/* Spiegel font */
+/*
+@font-face {
+   font-family: 'Spiegel';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/Spiegel/Spiegel-Regular.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Spiegel';
+   font-style: italic;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/Spiegel/Spiegel-RegularItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Spiegel';
+   font-style: normal;
+   font-weight: 600;
+   font-display: swap;
+   src: url('../Fonts/Spiegel/Spiegel-SemiBold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Spiegel';
+   font-style: italic;
+   font-weight: 600;
+   font-display: swap;
+   src: url('../Fonts/Spiegel/Spiegel-SemiBoldItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Spiegel';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/Spiegel/Spiegel-Bold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Spiegel';
+   font-style: italic;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/Spiegel/Spiegel-BoldItalic.ttf') format('truetype');
+}
+
+/* BeaufortForLOL font */
+/*
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: normal;
+   font-weight: 300;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Light.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: italic;
+   font-weight: 300;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-LightItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Regular.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: italic;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-RegularItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Medium.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: italic;
+   font-weight: 500;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Bold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: italic;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: normal;
+   font-weight: 800;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'BeaufortForLOL';
+   font-style: italic;
+   font-weight: 800;
+   font-display: swap;
+   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-ExtraBoldItalic.ttf') format('truetype');
+}
