@@ -1,0 +1,12 @@
+{
+   "Home": {
+      "MainTitle": "Hi, I'm Victor !",
+      "CatchPhrase": "Software Engineer with over 2 years of experience in creating digital products. My expertise lies in server-side application design, APIs, and microservices.",
+      "CTO": {
+         "Resume": "Resume",
+         "Linkedin": "Linkedin",
+         "Github": "Github",
+         "Contact": "Get in touch"
+      }
+   }
+}

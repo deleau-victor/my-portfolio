@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2000" fill="none">
+   <rect fill='#f3f3f3' width='1200' height='2000'/>
+   <defs>
+      <linearGradient id='a' x1='0' x2='0' y1='1' y2='0'>
+         <stop  offset='0' stop-color='#6b47e3'/>
+         <stop  offset='1' stop-color='#09BC89'/>
+      </linearGradient>
+      <linearGradient id='b' x1='0' x2='0' y1='0' y2='1'>
+         <stop  offset='0' stop-color='#FF891E'/>
+         <stop  offset='1' stop-color='#FF79CE'/>
+      </linearGradient>
+   </defs>
+   <path fill="#f3f3f3" d="M0 0h1200v6158H0z"/>
+   <path stroke="#eaeaea" stroke-linecap="round" stroke-width="1.5" d="M238.236 6158.34V-49.233M479 6158.58V-49m241 6207.58V-49m241 6207.68V-48.9"/>
+   <g fill='#f3f3f3' fill-opacity='0' stroke-miterlimit='10' opacity="0.5">
+      <g  stroke='url(#a)' stroke-width='2'>
+         <path  transform='translate(-480 13.6) rotate(5.65 1409 581) scale(0.9929789999999998)' d='M1409 581 1450.35 511 1490 581z'/>
+         <circle  stroke-width='2.2' transform='translate(-350 72) rotate(12.100000000000001 800 450) scale(1.0177569999999998)' cx='500' cy='100' r='40'/>
+         <path  transform='translate(-180 -130.5) rotate(111.5 401 736) scale(1.0177569999999998)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/>
+      </g>
+      <g stroke='url(#b)' stroke-width='2'>
+         <path  transform='translate(335 -9.799999999999999) rotate(2.4499999999999997 150 345) scale(0.9649929999999999)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/>
+         <rect  stroke-width='4.4' transform='translate(-370.5 0) rotate(122.4 1089 759)' x='1039' y='709' width='100' height='100'/>
+         <path  transform='translate(-310.6 98.4) rotate(20.4 1400 132) scale(0.905)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/>
+      </g>
+   </g>
+</svg>

@@ -1,0 +1,12 @@
+{
+   "Home": {
+      "MainTitle": "Bonjour, je suis Victor !",
+      "CatchPhrase": "Développeur avec plus de 2 ans d'expérience dans la création de produits numériques. Mon expertise réside dans la conception d'applications côté serveur, les API et les microservices.",
+      "CTO": {
+         "Resume": "Curriculum Vitae",
+         "Linkedin": "Linkedin",
+         "Github": "Github",
+         "Contact": "Contactez-moi"
+      }
+   }
+}

@@ -6,10 +6,11 @@
    font-family: 'Spiegel';
    line-height: 1.5;
    font-weight: 400;
+   user-select: none;
 
    color-scheme: light dark;
-   color: rgba(255, 255, 255, 0.87);
-   background-color: #242424;
+   color: rgba(0, 0, 0, 0.87);
+   background-color: #f3f3f3;
 
    font-synthesis: none;
    text-rendering: optimizeLegibility;
@@ -32,6 +33,7 @@
 }
 
 body {
+   position: relative;
    margin: 0;
    /* display: flex; */
    place-items: center;
@@ -49,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-   font-family: 'BeaufortForLOL';
+   font-family: 'Garnett';
 }
 
 /* *********** H1 *********** */
@@ -219,12 +221,12 @@ li {
 /* *********** LINK *********** */
 a {
    font-weight: 500;
-   color: var(--light);
+   color: var(--dark);
    text-decoration: inherit;
    width: fit-content;
 }
 a:hover {
-   color: var(--light);
+   color: var(--dark);
 }
 
 /* *********** BUTTON *********** */
@@ -258,255 +260,4 @@ input:-webkit-autofill:active {
    -webkit-text-fill-color: var(--dark) 000;
    transition: background-color 5000s ease-in-out 0s;
    box-shadow: inset 0 0 20px 20px var(--light);
-}
-
-/* ***************************** */
-/* *********** FONTS *********** */
-/* ***************************** */
-
-/* Montserrat font */
-/*
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 100;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 100;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-ThinItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 200;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 200;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-ExtraLightItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 300;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 300;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 400;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 400;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-Italic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 500;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 500;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 600;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 600;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 700;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 700;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 800;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 800;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 900;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Montserrat';
-   font-style: italic;
-   font-weight: 900;
-   font-display: swap;
-   src: url('../Fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype');
-}
-
-/* Spiegel font */
-/*
-@font-face {
-   font-family: 'Spiegel';
-   font-style: normal;
-   font-weight: 400;
-   font-display: swap;
-   src: url('../Fonts/Spiegel/Spiegel-Regular.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Spiegel';
-   font-style: italic;
-   font-weight: 400;
-   font-display: swap;
-   src: url('../Fonts/Spiegel/Spiegel-RegularItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Spiegel';
-   font-style: normal;
-   font-weight: 600;
-   font-display: swap;
-   src: url('../Fonts/Spiegel/Spiegel-SemiBold.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Spiegel';
-   font-style: italic;
-   font-weight: 600;
-   font-display: swap;
-   src: url('../Fonts/Spiegel/Spiegel-SemiBoldItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Spiegel';
-   font-style: normal;
-   font-weight: 700;
-   font-display: swap;
-   src: url('../Fonts/Spiegel/Spiegel-Bold.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'Spiegel';
-   font-style: italic;
-   font-weight: 700;
-   font-display: swap;
-   src: url('../Fonts/Spiegel/Spiegel-BoldItalic.ttf') format('truetype');
-}
-
-/* BeaufortForLOL font */
-/*
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: normal;
-   font-weight: 300;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Light.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: italic;
-   font-weight: 300;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-LightItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: normal;
-   font-weight: 400;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Regular.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: italic;
-   font-weight: 400;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-RegularItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: normal;
-   font-weight: 500;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Medium.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: italic;
-   font-weight: 500;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-MediumItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: normal;
-   font-weight: 700;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-Bold.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: italic;
-   font-weight: 700;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-BoldItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: normal;
-   font-weight: 800;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-ExtraBold.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'BeaufortForLOL';
-   font-style: italic;
-   font-weight: 800;
-   font-display: swap;
-   src: url('../Fonts/BeaufortForLOL/BeaufortForLOL-ExtraBoldItalic.ttf') format('truetype');
 }

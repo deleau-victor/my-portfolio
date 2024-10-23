@@ -1,0 +1,89 @@
+/* ***************************** */
+/* *********** FONTS *********** */
+/* ***************************** */
+
+/* Garnett font */
+@font-face {
+   font-family: 'Garnett';
+   font-style: normal;
+   font-weight: 300;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-Light.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: italic;
+   font-weight: 300;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-LightItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-Regular.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: italic;
+   font-weight: 400;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-RegularItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-Medium.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: italic;
+   font-weight: 500;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: normal;
+   font-weight: 600;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-Semibold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: italic;
+   font-weight: 600;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-SemiboldItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-Bold.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: italic;
+   font-weight: 700;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: normal;
+   font-weight: 900;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-Black.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Garnett';
+   font-style: italic;
+   font-weight: 900;
+   font-display: swap;
+   src: url('../Fonts/Garnett/Garnett-BlackItalic.ttf') format('truetype');
+}
