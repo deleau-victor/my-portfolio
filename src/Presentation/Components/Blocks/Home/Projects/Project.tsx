@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { FC, useState } from 'react';
 
-import appImage from '../../../../Assets/dday-live.png';
 import {
    ArroxBox,
    BlurredLight,
@@ -18,32 +17,37 @@ import {
 import ScaleAndRotate from '@/Presentation/Components/Generics/TransformOnHoverElement/ScaleAndRotate';
 import CircleIcon from '@/Presentation/Svgr/Circle.svgr';
 import ArrowIcon from '@/Presentation/Svgr/Arrow.svgr';
+import { Dictionary } from '@/Infrastructure/Config/Dictionnaries';
 
-interface ProjectProps {}
+interface ProjectProps {
+   project: Dictionary['Projects'][0];
+}
 
-const Project: FC<ProjectProps> = ({}) => {
+const Project: FC<ProjectProps> = ({ project }) => {
    const [isHovered, setIsHovered] = useState(false);
 
    return (
       <ProjectBox>
          <ProjectLinkBox
-            href={''}
+            href={project.Name}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
          >
             <ProjectImageBox>
                <ScaleAndRotate isTrigerred={isHovered}>
                   <BlurredLight size={120} color="#6b47e3" />
-                  <Image src={appImage} alt="D-Day Live" width={288} />
+                  <Image
+                     src={`/assets/${project.MediaPath}/home-mockup.png`}
+                     alt="D-Day Live"
+                     width={288}
+                     height={469}
+                  />
                </ScaleAndRotate>
             </ProjectImageBox>
             <ProjectTextBox>
-               <ProjectTitle color="#6b47e3">D-Day Live</ProjectTitle>
-               <ProjectDescription>
-                  Vous connecter en temps réel aux événements et sites historiques du débarquement
-                  en Normandie. Explorez, suivez, et vivez l'histoire.
-               </ProjectDescription>
-               <ProjectTag>Tourisme • B2C • Application Mobile iOS & Android</ProjectTag>
+               <ProjectTitle color="#6b47e3">{project.Name}</ProjectTitle>
+               <ProjectDescription>{project.Intro}</ProjectDescription>
+               <ProjectTag>{project.Tags}</ProjectTag>
                <ArroxBox>
                   <CircleIcon width={26} height={26} />
                   <StyledArrow

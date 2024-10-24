@@ -14,6 +14,7 @@ const HomeBackground: FC = () => {
             layout="fill"
             objectFit="cover"
             objectPosition="center top"
+            priority
          />
       </Background>
    );

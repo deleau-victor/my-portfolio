@@ -16,7 +16,7 @@ interface CtoZoneProps {
 const CtoZone: FC<CtoZoneProps> = ({ dict }) => {
    return (
       <CtoZoneBox>
-         <CtoLink link={''} Icon={SheetIcon}>
+         <CtoLink link={'/assets/resume.pdf'} Icon={SheetIcon}>
             {dict.Home.CTO.Resume}
          </CtoLink>
          <CtoLink reverse link={'https://www.linkedin.com/in/victor-deleau/'} Icon={LinkedinIcon}>

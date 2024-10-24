@@ -8,5 +8,88 @@
          "Github": "Github",
          "Contact": "Contactez-moi"
       }
-   }
+   },
+   "Project": {
+      "Discover": "Découvrir le projet",
+      "Overview": "Aperçu",
+      "Role": "Mon rôle",
+      "Technologies": "Technologies",
+      "Interface": "Interface",
+      "Timeline": "Durée",
+      "Challenge": "Les défis de conception",
+      "Highlights": "Caractéristiques du produit"
+   },
+   "Projects": [
+      {
+         "Id": 1,
+         "Name": "D-Day Live",
+         "Intro": "Vous connecter en temps réel aux événements et sites historiques du débarquement en Normandie. Explorez, suivez, et vivez l'histoire.",
+         "Tags": "Tourisme • B2C • Application Mobile iOS & Android",
+         "ProjectLink": "https://apps.apple.com/fr/app/d-day-live/id6473959579",
+         "MediaPath": "ddaylive",
+         "Highlights": [
+            {
+               "Name": "home-screen",
+               "MediaTitle": "Page d'accueil : accès rapide aux fonctionnalités principales",
+               "Caption": "La page d'accueil de l'application DDay Live offre un accès rapide aux fonctionnalités clés, telles que la carte interactive, l'agenda des événements, les lieux historiques et les actualités."
+            },
+            {
+               "Name": "map-screen",
+               "MediaTitle": "Carte interactive des lieux et évènements",
+               "Caption": "La carte interactive de DDay Live permet aux utilisateurs de découvrir les lieux historiques et les points d'intérêt à proximité. Chaque point comprend des informations de contact, la possibilité de se faire guider par une application de navigation, ainsi que la page dédiée du lieu ou de l'événement."
+            },
+            {
+               "Name": "calendar-screen",
+               "MediaTitle": "Agenda des événements",
+               "Caption": "L'agenda des événements de DDay Live permet aux utilisateurs de consulter les événements à venir, avec des options de filtrage par date, type et lieu, afin de personnaliser leur expérience."
+            },
+            {
+               "Name": "places-screen",
+               "MediaTitle": "Liste des lieux historiques et points d'intérêt",
+               "Caption": "À l'instar de l'agenda, la liste des lieux offre aux utilisateurs un accès rapide aux informations sur les lieux historiques et les points d'intérêt, avec la possibilité de filtrer par catégorie, distance, et plus."
+            },
+            {
+               "Name": "news-screen",
+               "MediaTitle": "Actualités et informations",
+               "Caption": "La page d'actualités de DDay Live permet aux utilisateurs de rester informés des dernières nouvelles concernant les événements à venir et les lieux historiques. Les informations sont relayées par notre client et la préfecture de la Manche."
+            }
+         ],
+         "Overview": "**DDay Live*/* est une application recensant tous les lieux historiques, points d'intérêt et événements autour des anniversaires du débarquement en Normandie. Ce projet est né du constat qu'aucune application n'existait pour guider les visiteurs durant leur séjour pendant les commémorations. Reliée aux flux de données officiels des offices de tourisme et de partenaires locaux, DDay Live répond à un besoin essentiel en matière de communication et d'information sur cet événement.\nEn tant que chef de projet et développeur backend, j'ai dirigé la création de cette application, avec pour objectif d'améliorer significativement l'expérience des visiteurs.\n🔥 **Impact :*/* L'application a été téléchargée par près de 10 % des visiteurs, avec des retours majoritairement positifs, ce qui a conduit à la décision de poursuivre son développement pour les années à venir.",
+         "RoleOverview": "J'ai dirigé et participé à l'ensemble du processus de création, de la conception à la mise en production. Cela inclut le choix de l'architecture logicielle, la conception complète du flux de données alimentant l'application, ainsi que la contribution à la création d'une partie de l'interface utilisateur.",
+         "Collaborators": [
+            {
+               "Name": "Moi-même",
+               "Role": "Chef de projet, Développeur Backend"
+            },
+            {
+               "Name": "Aumond Dylan",
+               "Role": "Développeur Mobile"
+            },
+            {
+               "Name": "Forcadel Hugo",
+               "Role": "Développeur Mobile"
+            }
+         ],
+         "Technologies": ["Flutter", "ASP.NET", "Redis", "PostgreSQL"],
+         "Interface": ["Application mobile"],
+         "Timeline": "7 mois",
+         "SolvedProblems": [
+            {
+               "Title": "Infrastructure réseau insuffisante",
+               "Problem": "Le département de la Manche, où se déroulent les événements du débarquement en Normandie, est majoritairement rural. Les infrastructures réseau sont souvent insuffisantes pour supporter un grand nombre de connexions simultanées en raison de l'afflux de visiteurs. De plus, des brouilleurs de réseau peuvent être utilisés lors des visites de personnalités importantes. Cela rend difficile la garantie d'une connexion stable pour les utilisateurs de l'application.",
+               "Solution": "Pour remédier à ce problème, nous avons mis en place un système de cache local pour les données de l'application, permettant une utilisation hors ligne. L'application se met à jour automatiquement dès qu'une connexion Internet est disponible."
+            },
+            {
+               "Title": "Multitude de sources de données à coordonner",
+               "Problem": "Les données de l'application proviennent de plusieurs sources, telles que les offices de tourisme, des partenaires locaux et le client lui-même. Les flux de données étant hétérogènes et ayant des fréquences de maintenance variées, il était difficile d'assurer une cohérence et une disponibilité optimales.",
+               "Solution": "Pour garantir la cohérence et la disponibilité des données, j'ai mis en place un serveur de données centralisé qui récupère et normalise les données de toutes les sources, avant de les redistribuer aux utilisateurs de l'application."
+            },
+            {
+               "Title": "Équipe de développement réduite et délais de conception serrés",
+               "Problem": "L'équipe de développement était constituée de trois personnes, dont deux développeurs à mi-temps et moi-même. Les délais de conception étaient serrés, avec un test utilisateur prévu cinq mois après le début du projet, soit en mars 2024, et une sortie fixée en mai 2024 pour les commémorations du débarquement.",
+               "Solution": "Pour respecter ces délais tout en garantissant une efficacité maximale, j'ai choisi une architecture logicielle simple et robuste, basée sur le framework Flutter. Cela a permis de développer une seule application pour les deux plateformes, iOS et Android."
+            }
+         ]
+      }
+   ]
 }

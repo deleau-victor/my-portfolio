@@ -8,5 +8,88 @@
          "Github": "Github",
          "Contact": "Get in touch"
       }
-   }
+   },
+   "Project": {
+      "Discover": "Discover the project",
+      "Overview": "Overview",
+      "Role": "My role",
+      "Technologies": "Technologies",
+      "Interface": "Interface",
+      "Timeline": "Timeline",
+      "Challenge": "Design challenges",
+      "Highlights": "Product Highlights"
+   },
+   "Projects": [
+      {
+         "Id": 1,
+         "Name": "D-Day Live",
+         "Intro": "Connect in real-time to the events and historical sites of the Normandy D-Day landings. Explore, track, and experience history as it unfolds.",
+         "Tags": "Tourism • B2C • iOS & Android Mobile App",
+         "ProjectLink": "https://apps.apple.com/fr/app/d-day-live/id6473959579",
+         "MediaPath": "ddaylive",
+         "Highlights": [
+            {
+               "Name": "home-screen",
+               "MediaTitle": "Home page: Quick access to key features",
+               "Caption": "The home page of the DDay Live app provides quick access to key features, such as the interactive map, event calendar, historical sites, and news updates."
+            },
+            {
+               "Name": "map-screen",
+               "MediaTitle": "Interactive map of historical sites",
+               "Caption": "The DDay Live interactive map allows users to explore historical sites and points of interest nearby. Each point includes contact information, the option to open the destination in a navigation app, and a link to the dedicated page for the site or event."
+            },
+            {
+               "Name": "calendar-screen",
+               "MediaTitle": "Event calendar",
+               "Caption": "The DDay Live event calendar enables users to view upcoming events, with filtering options by date, type, and location to customize their experience."
+            },
+            {
+               "Name": "places-screen",
+               "MediaTitle": "List of historical sites and points of interest",
+               "Caption": "Similar to the event calendar, the list of sites provides users with quick access to information about historical locations and points of interest, with options to filter by category, distance, and more."
+            },
+            {
+               "Name": "news-screen",
+               "MediaTitle": "News and information",
+               "Caption": "The news page of DDay Live keeps users informed about the latest updates regarding upcoming events and historical sites. Information is sourced from our client and the Manche prefecture."
+            }
+         ],
+         "Overview": "**DDay Live*/* is an app that lists all the historical sites, points of interest, and events related to the Normandy D-Day anniversaries. This project was born from the observation that no app existed to guide visitors during their stay for the commemorations. Connected to official data streams from tourism offices and local partners, DDay Live meets a critical need for communication and information about this event.\nAs the project manager and backend developer, I led the creation of this app with the goal of significantly enhancing the visitor experience.\n🔥 **Impact:*/* The app has been downloaded by nearly 10% of visitors, with mostly positive feedback, which led to the decision to continue its development for future years.",
+         "RoleOverview": "I led and was involved in the end-to-end creation process, from design to production. This included choosing the software architecture, designing the entire data flow that powers the app, and contributing to the development of part of the user interface.",
+         "Collaborators": [
+            {
+               "Name": "Me",
+               "Role": "Project Manager, Backend Developer"
+            },
+            {
+               "Name": "Aumond Dylan",
+               "Role": "Mobile Developer"
+            },
+            {
+               "Name": "Forcadel Hugo",
+               "Role": "Mobile Developer"
+            }
+         ],
+         "Technologies": ["Flutter", "ASP.NET", "Redis", "PostgreSQL"],
+         "Interface": ["Mobile app"],
+         "Timeline": "7 months",
+         "SolvedProblems": [
+            {
+               "Title": "Insufficient network infrastructure",
+               "Problem": "The Manche department, where the Normandy D-Day events take place, is largely rural. The network infrastructure is often inadequate to support a high volume of simultaneous connections due to the influx of visitors. Additionally, network jammers may be used during visits from important figures, making it challenging to ensure a stable connection for app users.",
+               "Solution": "To address this issue, we implemented a local caching system for the app's data, allowing for offline usage. The app automatically updates as soon as an internet connection is available."
+            },
+            {
+               "Title": "A Multitude of Data Sources to coordinate",
+               "Problem": "The app's data comes from multiple sources, such as tourism offices, local partners, and the client itself. With heterogeneous data streams and varying maintenance frequencies, it was difficult to ensure optimal consistency and availability.",
+               "Solution": "To guarantee data consistency and availability, I set up a centralized data server that retrieves and normalizes data from all sources before redistributing it to app users."
+            },
+            {
+               "Title": "Small development team and tight design deadlines",
+               "Problem": "The development team consisted of three people, including two part-time developers and myself. The design deadlines were tight, with user testing scheduled five months after the project's kickoff, in March 2024, and a release set for May 2024 for the D-Day commemorations.",
+               "Solution": "To meet these deadlines while ensuring maximum efficiency, I opted for a simple yet robust software architecture based on the Flutter framework. This allowed us to develop a single app for both iOS and Android platforms."
+            }
+         ]
+      }
+   ]
 }

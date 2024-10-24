@@ -30,16 +30,50 @@ export function middleware(request: NextRequest) {
       (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
    );
 
+   const negotiatorHeaders: Record<string, string> = {};
+   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+
+   const requestedLocale =
+      negotiatorHeaders['cookie'].includes('NEXT_LOCALE') &&
+      (
+         negotiatorHeaders['cookie'].split(';').find((c) => c.includes('NEXT_LOCALE')) as string
+      ).split('=')[1];
+
+   if (requestedLocale !== pathname.split('/')[1] && !pathnameIsMissingLocale) {
+      return NextResponse.next({
+         headers: {
+            'Set-Cookie': `NEXT_LOCALE=${
+               pathname.split('/')[1]
+            }; Path=/; HttpOnly; SameSite=Lax; Max-Age=31536000`
+         }
+      });
+   }
+
    // Redirect if there is no locale
    if (pathnameIsMissingLocale) {
       const locale = getLocale(request);
 
-      return NextResponse.redirect(
-         new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url)
-      );
+      if (!requestedLocale) {
+         // Add cookie to the response to remember the detected locale
+         return NextResponse.redirect(
+            new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url),
+            {
+               headers: {
+                  'Set-Cookie': `NEXT_LOCALE=${locale}; Path=/; HttpOnly; SameSite=Lax; Max-Age=31536000`
+               }
+            }
+         );
+      } else {
+         return NextResponse.redirect(
+            new URL(
+               `/${requestedLocale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
+               request.url
+            )
+         );
+      }
    }
 }
 
 export const config = {
-   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|assets).*)']
 };

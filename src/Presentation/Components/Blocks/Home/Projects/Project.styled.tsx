@@ -1,9 +1,8 @@
 import TransformOnHoverElement from '@/Presentation/Components/Generics/TransformOnHoverElement/TransformOnHoverElement';
-import ArrowIcon from '@/Presentation/Svgr/Arrow.svgr';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
-interface IColoredElementProps {
+export interface IColoredElementProps {
    color: string;
 }
 
