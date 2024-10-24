@@ -34,6 +34,7 @@ export function middleware(request: NextRequest) {
    request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
    const requestedLocale =
+      negotiatorHeaders['cookie'] &&
       negotiatorHeaders['cookie'].includes('NEXT_LOCALE') &&
       (
          negotiatorHeaders['cookie'].split(';').find((c) => c.includes('NEXT_LOCALE')) as string
