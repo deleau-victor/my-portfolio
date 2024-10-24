@@ -1,7 +1,7 @@
 'use client';
 import { FC } from 'react';
 import { AvatarContainer, AvatarImage } from './Avatar.styled';
-import avatarPic from '@/Presentation/assets/victor.png';
+import avatarPic from '../../../Assets/victor.png';
 
 interface AvatarProps {}
 
