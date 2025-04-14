@@ -73,13 +73,13 @@ const Project: FC<ProjectProps> = ({ project, reverse }) => {
                   <BlurredLight
                      size={120}
                      color={project.Color}
-                     transform={getTransform(project.Type)}
+                     transform={getTransform(project.Type as MockupType)}
                   />
                   <Image
                      src={`/assets/${project.MediaPath}/home-mockup.png`}
                      alt="D-Day Live"
-                     width={getMockupSize(project.Type).width}
-                     height={getMockupSize(project.Type).height}
+                     width={getMockupSize(project.Type as MockupType).width}
+                     height={getMockupSize(project.Type as MockupType).height}
                   />
                </ScaleAndRotate>
             </ProjectImageBox>

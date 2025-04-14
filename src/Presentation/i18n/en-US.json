@@ -21,8 +21,10 @@
    },
    "Projects": [
       {
-         "Id": 1,
+         "Id": 2,
          "Name": "D-Day Live",
+         "Type": "Mobile",
+         "Color": "#6b47e3",
          "Intro": "Connect in real-time to the events and historical sites of the Normandy D-Day landings. Explore, track, and experience history as it unfolds.",
          "Tags": "Tourism • B2C • iOS & Android Mobile App",
          "ProjectLink": "https://apps.apple.com/fr/app/d-day-live/id6473959579",
@@ -88,6 +90,56 @@
                "Title": "Small development team and tight design deadlines",
                "Problem": "The development team consisted of three people, including two part-time developers and myself. The design deadlines were tight, with user testing scheduled five months after the project's kickoff, in March 2024, and a release set for May 2024 for the D-Day commemorations.",
                "Solution": "To meet these deadlines while ensuring maximum efficiency, I opted for a simple yet robust software architecture based on the Flutter framework. This allowed us to develop a single app for both iOS and Android platforms."
+            }
+         ]
+      },
+      {
+         "Id": 1,
+         "Name": "Coexis",
+         "Type": "Desktop",
+         "Color": "#FFB800",
+         "Intro": "A B2B matchmaking platform connecting freelancers with businesses, featuring intelligent matching, secure payment integration, and real-time messaging.",
+         "Tags": "B2B • Marketplace • Web App",
+         "ProjectLink": "",
+         "MediaPath": "coexis",
+         "Highlights": [
+            {
+               "Name": "dashboard-screen",
+               "MediaTitle": "User Dashboard",
+               "Caption": "The dashboard provides freelancers and businesses with quick access to key information such as active projects, payments, messages, and personalized suggestions."
+            },
+            {
+               "Name": "profile-screen",
+               "MediaTitle": "Profile Settings",
+               "Caption": "Users can personalize their profiles by adding skills, experience, and preferences, enhancing the accuracy of mission and freelancer recommendations."
+            }
+         ],
+         "Overview": "**Coexis** is a B2B platform connecting freelancers with companies. It allows users to publish job offers, get in touch with service providers, chat via an integrated messaging system, and manage payments securely through Stripe. The goal is to streamline interactions between independent professionals and recruiters by automating key processes like matching, contracting, transactions, and progress tracking.",
+         "RoleOverview": "I handled the fullstack development of the platform and was involved in all phases of the project—from defining the architecture, to integrating payment services, to building the user interfaces and core matching logic.",
+         "Collaborators": [
+            {
+               "Name": "Myself",
+               "Role": "Fullstack Developer"
+            }
+         ],
+         "Technologies": ["ASP.NET Core", "Vue.js", "PostgreSQL", "SignalR", "Stripe API"],
+         "Interface": ["Responsive web application"],
+         "Timeline": "6 months",
+         "SolvedProblems": [
+            {
+               "Title": "Secure payment integration with KYC/KYS compliance",
+               "Problem": "To enable secure transactions between companies and freelancers, the platform needed a fully compliant payment system, including identity verification processes.",
+               "Solution": "I integrated Stripe Connect with automated KYC/KYS workflows, supporting user onboarding, wallet management, and payout operations."
+            },
+            {
+               "Title": "Relevant profile-to-mission matching",
+               "Problem": "Automatically suggesting the most relevant missions to freelancers was challenging without an intelligent matching system.",
+               "Solution": "I built a custom matching algorithm based on weighted criteria (technical tags, industry, budget, availability), offering tailored suggestions to each user."
+            },
+            {
+               "Title": "Seamless communication between users",
+               "Problem": "The platform needed a direct and responsive communication tool between freelancers and clients.",
+               "Solution": "I implemented a real-time messaging system using SignalR, featuring read receipts, notifications, and per-mission conversation threads."
             }
          ]
       }
