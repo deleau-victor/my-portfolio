@@ -1,7 +1,7 @@
 {
    "Home": {
       "MainTitle": "Bonjour, je suis Victor !",
-      "CatchPhrase": "Consultant en ingénierie logicielle depuis plus de trois ans maintenant, j'apporte à vos équipes et vos projets une forte exigence de qualité.",
+      "CatchPhrase": "Développeur fullstack .NET & TypeScript, guidé par le craft et soucieux d’architecture, de qualité et de maintenabilité",
       "CTO": {
          "Resume": "Curriculum Vitae",
          "Linkedin": "Linkedin",
@@ -21,8 +21,10 @@
    },
    "Projects": [
       {
-         "Id": 1,
+         "Id": 2,
          "Name": "D-Day Live",
+         "Type": "Mobile",
+         "Color": "#6b47e3",
          "Intro": "Vous connecter en temps réel aux événements et sites historiques du débarquement en Normandie. Explorez, suivez, et vivez l'histoire.",
          "Tags": "Tourisme • B2C • Application Mobile iOS & Android",
          "ProjectLink": "https://apps.apple.com/fr/app/d-day-live/id6473959579",
@@ -70,7 +72,7 @@
                "Role": "Développeur Mobile"
             }
          ],
-         "Technologies": ["Flutter", "ASP.NET", "Redis", "PostgreSQL"],
+         "Technologies": ["Flutter", "ASP.NET 8", "Redis", "PostgreSQL"],
          "Interface": ["Application mobile"],
          "Timeline": "7 mois",
          "SolvedProblems": [
@@ -88,6 +90,56 @@
                "Title": "Équipe de développement réduite et délais de conception serrés",
                "Problem": "L'équipe de développement était constituée de trois personnes, dont deux développeurs à mi-temps et moi-même. Les délais de conception étaient serrés, avec un test utilisateur prévu cinq mois après le début du projet, soit en mars 2024, et une sortie fixée en mai 2024 pour les commémorations du débarquement.",
                "Solution": "Pour respecter ces délais tout en garantissant une efficacité maximale, j'ai choisi une architecture logicielle simple et robuste, basée sur le framework Flutter. Cela a permis de développer une seule application pour les deux plateformes, iOS et Android."
+            }
+         ]
+      },
+      {
+         "Id": 1,
+         "Name": "Coexis",
+         "Type": "Desktop",
+         "Color": "#FFB800",
+         "Intro": "Une plateforme de mise en relation entre freelances et entreprises, avec système de matching intelligent, gestion des paiements et messagerie intégrée.",
+         "Tags": "B2B • Marketplace • Web App",
+         "ProjectLink": "",
+         "MediaPath": "coexis",
+         "Highlights": [
+            {
+               "Name": "dashboard-screen",
+               "MediaTitle": "Tableau de bord utilisateur",
+               "Caption": "Le tableau de bord regroupe les informations clés pour le freelance ou l'entreprise : missions en cours, paiements, messagerie, suggestions de profils correspondants, etc."
+            },
+            {
+               "Name": "profile-screen",
+               "MediaTitle": "Paramètres de profil",
+               "Caption": "Les utilisateurs peuvent personnaliser leur profil en ajoutant des informations sur leurs compétences, expériences, et préférences. Cela permet d'améliorer la pertinence des suggestions de missions ou de freelances."
+            }
+         ],
+         "Overview": "**Coexis** est une plateforme de mise en relation B2B entre freelances et entreprises. Elle permet de publier des missions, d'entrer en contact avec des prestataires, d'échanger via une messagerie intégrée et de gérer les paiements en toute sécurité via Stripe. L’objectif est de fluidifier les échanges entre indépendants et recruteurs, en automatisant les processus clés (matching, contractualisation, transaction, suivi).",
+         "RoleOverview": "J'ai assuré le développement fullstack de l’application et participé à toutes les phases du projet : de la définition de l’architecture à l'intégration des services de paiement, en passant par la création des interfaces et de la logique de matching.",
+         "Collaborators": [
+            {
+               "Name": "Moi-même",
+               "Role": "Développeur Fullstack"
+            }
+         ],
+         "Technologies": ["ASP.NET Core", "Vue.js", "PostgreSQL", "SignalR", "Stripe API"],
+         "Interface": ["Application web responsive"],
+         "Timeline": "6 mois",
+         "SolvedProblems": [
+            {
+               "Title": "Complexité de l'intégration des paiements sécurisés (KYC / KYS)",
+               "Problem": "Pour permettre aux entreprises de payer les freelances via la plateforme, il fallait gérer l’ensemble du parcours de paiement, tout en respectant les obligations légales (vérification KYC/KYS).",
+               "Solution": "J’ai intégré Stripe Connect avec ses modules de vérification automatique (Know Your Customer / Know Your Supplier), en automatisant l’onboarding des utilisateurs, la gestion des wallets et des reversements."
+            },
+            {
+               "Title": "Correspondance pertinente entre profils et missions",
+               "Problem": "Il était difficile de proposer automatiquement des missions pertinentes à un freelance sans un système d’appariement intelligent.",
+               "Solution": "J’ai conçu un algorithme de matching basé sur des règles pondérées (tags techniques, secteur, budget, disponibilité) permettant d’identifier les meilleures correspondances et de les suggérer à l'utilisateur."
+            },
+            {
+               "Title": "Communication fluide entre les utilisateurs",
+               "Problem": "Le besoin d’un échange direct et réactif entre freelances et entreprises nécessitait une messagerie instantanée simple et fiable.",
+               "Solution": "J’ai intégré une messagerie temps réel basée sur SignalR, avec support des statuts de lecture, de notifications et d’un historique par mission."
             }
          ]
       }

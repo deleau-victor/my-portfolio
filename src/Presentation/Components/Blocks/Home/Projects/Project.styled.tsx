@@ -8,6 +8,14 @@ export interface IColoredElementProps {
 
 interface IBlurredLightProps extends IColoredElementProps {
    size: number;
+   transform: {
+      translateX?: number;
+      translateY?: number;
+   };
+}
+
+interface IDirection {
+   reverse?: boolean;
 }
 
 const ProjectBox = styled.div`
@@ -19,11 +27,12 @@ const ProjectBox = styled.div`
    padding-bottom: 20rem;
 `;
 
-const ProjectLinkBox = styled(Link)`
+const ProjectLinkBox = styled(Link)<IDirection>`
    position: relative;
    width: fit-content;
    height: 100%;
    display: flex;
+   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
    justify-content: center;
    align-items: flex-start;
    cursor: pointer;
@@ -90,19 +99,20 @@ const BlurredLight = styled.div<IBlurredLightProps>`
    border-radius: 50%;
    background-color: ${({ color }) => color};
    box-shadow: 0px 0px ${({ size }) => size}px ${({ size }) => size}px ${({ color }) => color};
-   transform: translateY(200%) translateX(65%);
+   transform: translateY(${({ transform }) => transform.translateY || 0}%)
+      translateX(${({ transform }) => transform.translateX || 0}%);
    z-index: -1;
 `;
 
 export {
-   ProjectBox,
-   ProjectTextBox,
-   ProjectImageBox,
-   ProjectTitle,
-   ProjectDescription,
-   ProjectTag,
-   BlurredLight,
    ArroxBox,
-   StyledArrow,
-   ProjectLinkBox
+   BlurredLight,
+   ProjectBox,
+   ProjectDescription,
+   ProjectImageBox,
+   ProjectLinkBox,
+   ProjectTag,
+   ProjectTextBox,
+   ProjectTitle,
+   StyledArrow
 };
