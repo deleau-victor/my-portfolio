@@ -1,5 +1,4 @@
-import { ISvgProps } from '@/Domain/Contracts/ISvgProps';
-import * as React from 'react';
+import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
 
 const SheetIcon = (props: ISvgProps) => (
    <svg xmlns="http://www.w3.org/2000/svg" id="Calque_1" viewBox="0 0 64 64" {...props}>

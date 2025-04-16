@@ -1,20 +1,20 @@
-import { Dictionary, getDictionary } from '@/Infrastructure/Config/Dictionnaries';
-import { i18n, Locale } from '@/Infrastructure/Config/i18n-config';
-import { notFound } from 'next/navigation';
+import { Dictionary } from '@/Infrastructure/i18n/Dictionary';
+import { InternationalizationContext } from '@/Infrastructure/Internationalization/InternationalizationContext';
 import ProjectElement from '@/Presentation/Components/Blocks/Project/Project';
+import { notFound } from 'next/navigation';
 
-// Get a literral type from the Projects array
 export type ProjectName = Dictionary['Projects'][number]['Name'];
 export type Project = Dictionary['Projects'][number];
 
 interface IProjectParams {
    params?: {
-      [key: string]: Locale | ProjectName;
+      [key: string]: string | ProjectName;
    };
 }
 
-const getProject = async (projectName: string, lang: Locale) => {
-   const dict = await getDictionary(lang);
+const getProject = async (projectName: string, locale: string | undefined) => {
+   const _internationalizationContext = InternationalizationContext.getInstance();
+   const dict = await _internationalizationContext.getDictionary(locale);
 
    const urlDecodedProjectName = decodeURIComponent(projectName);
 
@@ -22,15 +22,16 @@ const getProject = async (projectName: string, lang: Locale) => {
 };
 
 const Project = async ({ params }: IProjectParams) => {
-   const lang = params && params.lang ? (params.lang as Locale) : i18n.defaultLocale;
+   const _locale: string | undefined = params?.lang;
    const projectName = params && (params.project as ProjectName);
+   const _internationalizationContext = new InternationalizationContext();
+   const dict = await _internationalizationContext.getDictionary(_locale);
 
    if (!projectName) {
       return notFound();
    }
 
-   const dict = await getDictionary(lang);
-   const project = await getProject(projectName, lang);
+   const project = await getProject(projectName, _locale);
 
    if (!project) {
       return notFound();

@@ -1,4 +1,4 @@
-import { Guid } from '../Extensions/TypeExtension';
+import { Guid } from '../../Shared/Extensions/TypeExtension';
 import { IEntity } from './IEntity';
 
 export interface IAuditableEntity extends IEntity {

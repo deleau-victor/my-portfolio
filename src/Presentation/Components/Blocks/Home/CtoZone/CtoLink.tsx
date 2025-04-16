@@ -1,8 +1,8 @@
 'use client';
-import React, { FC, PropsWithChildren } from 'react';
-import { CtoLinkElement } from './CtoLink.styled';
 import ScaleAndRotate from '@/Presentation/Components/Generics/TransformOnHoverElement/ScaleAndRotate';
-import { ISvgProps } from '@/Domain/Contracts/ISvgProps';
+import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
+import { FC, PropsWithChildren } from 'react';
+import { CtoLinkElement } from './CtoLink.styled';
 
 interface CtoLinkProps {
    link: string;

@@ -1,5 +1,4 @@
-import { ISvgProps } from '@/Domain/Contracts/ISvgProps';
-import * as React from 'react';
+import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
 
 const PhoneIcon = (props: ISvgProps) => (
    <svg

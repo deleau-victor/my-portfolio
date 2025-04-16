@@ -1,4 +1,4 @@
-import { Gradient } from '@/Domain/Contracts/Gradient';
+import { Gradient } from '@/Shared/Graphics/Gradient';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 

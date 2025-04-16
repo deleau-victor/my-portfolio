@@ -1,6 +1,6 @@
 'use client';
-import { Gradient } from '@/Domain/Contracts/Gradient';
-import { IDynamicElement } from '@/Domain/Contracts/IDynamicElement';
+import { Gradient } from '@/Shared/Graphics/Gradient';
+import { IDynamicElement } from '@/Shared/Helpers/IDynamicElement';
 import { FC } from 'react';
 import { DynamicGradientText } from './GradientText.styled';
 

@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { FC, useState } from 'react';
 
-import { Dictionary } from '@/Infrastructure/Config/Dictionnaries';
+import { Dictionary } from '@/Infrastructure/i18n/Dictionary';
 import ScaleAndRotate from '@/Presentation/Components/Generics/TransformOnHoverElement/ScaleAndRotate';
 import ArrowIcon from '@/Presentation/Svgr/Arrow.svgr';
 import CircleIcon from '@/Presentation/Svgr/Circle.svgr';

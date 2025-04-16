@@ -1,5 +1,5 @@
-import { Gradient } from '@/Domain/Contracts/Gradient';
-import { IDynamicElement } from '@/Domain/Contracts/IDynamicElement';
+import { Gradient } from '@/Shared/Graphics/Gradient';
+import { IDynamicElement } from '@/Shared/Helpers/IDynamicElement';
 import styled from '@emotion/styled';
 import { createElement } from 'react';
 

@@ -1,15 +1,13 @@
-import { Ii18nParam } from '@/Domain/Contracts/Ii18nParam';
-import { getDictionary } from '@/Infrastructure/Config/Dictionnaries';
-import { i18n } from '@/Infrastructure/Config/i18n-config';
+import { InternationalizationContext } from '@/Infrastructure/Internationalization/InternationalizationContext';
 import HomeBackground from '@/Presentation/Components/Blocks/Home/Background/HomeBackground';
 import HomeHeader from '@/Presentation/Components/Blocks/Home/Header/HomeHeader';
 import Project from '@/Presentation/Components/Blocks/Home/Projects/Project';
-import Image from 'next/image';
-import Link from 'next/link';
-import badge from '../../Presentation/Assets/badge_confirmé.png';
+import { IInternationalizationParam } from '@/Shared/Helpers/IInternationalizationParam';
 
-const Home = async ({ params }: Ii18nParam) => {
-   const dict = await getDictionary(params && params.lang ? params.lang : i18n.defaultLocale);
+const Home = async ({ params }: IInternationalizationParam) => {
+   const _locale: string | undefined = params?.lang;
+   const _internationalizationContext = InternationalizationContext.getInstance();
+   const dict = await _internationalizationContext.getDictionary(_locale);
 
    return (
       <>
@@ -18,18 +16,6 @@ const Home = async ({ params }: Ii18nParam) => {
          {dict.Projects.sort((a, b) => b.Id - a.Id).map((project, index) => (
             <Project key={project.Id} project={project} reverse={index % 2 !== 0} />
          ))}
-         <Link
-            href={'https://directory.opquast.com/fr/certificat/JHTE5N/'}
-            target="_blank"
-            style={{
-               width: 'fit-content',
-               margin: 'auto',
-               display: 'flex',
-               justifyContent: 'center'
-            }}
-         >
-            <Image src={badge} alt="badge" width={175} height={131} />
-         </Link>
       </>
    );
 };
