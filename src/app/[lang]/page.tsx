@@ -14,7 +14,7 @@ const Home = async ({ params }: IInternationalizationParam) => {
          <HomeBackground />
          <HomeHeader dict={dict} />
          {dict.Projects.sort((a, b) => b.Id - a.Id).map((project, index) => (
-            <Project key={project.Id} project={project} reverse={index % 2 !== 0} />
+            <Project key={project.Id} project={project} invert={index % 2 !== 0} />
          ))}
       </>
    );

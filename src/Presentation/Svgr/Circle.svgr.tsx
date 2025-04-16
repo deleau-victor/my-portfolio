@@ -1,4 +1,4 @@
-import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
+import { ISvgProps } from '@/Shared/Types/ISvgProps';
 
 const CircleIcon = (props: ISvgProps) => (
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" {...props}>

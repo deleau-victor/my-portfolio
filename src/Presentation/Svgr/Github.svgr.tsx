@@ -1,4 +1,4 @@
-import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
+import { ISvgProps } from '@/Shared/Types/ISvgProps';
 const GithubIcon = (props: ISvgProps) => (
    <svg xmlns="http://www.w3.org/2000/svg" width={98} height={96} viewBox="0 0 98 96" {...props}>
       <path

@@ -1,4 +1,4 @@
-import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
+import { ISvgProps } from '@/Shared/Types/ISvgProps';
 
 const LinkedinIcon = (props: ISvgProps) => (
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width={72} height={72} {...props}>

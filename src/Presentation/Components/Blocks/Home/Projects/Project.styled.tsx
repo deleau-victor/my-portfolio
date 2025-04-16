@@ -15,7 +15,7 @@ interface IBlurredLightProps extends IColoredElementProps {
 }
 
 interface IDirection {
-   reverse?: boolean;
+   invert?: boolean;
 }
 
 const ProjectBox = styled.div`
@@ -32,20 +32,21 @@ const ProjectLinkBox = styled(Link)<IDirection>`
    width: fit-content;
    height: 100%;
    display: flex;
-   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+   flex-direction: ${({ invert }) => (invert ? 'row-reverse' : 'row')};
    justify-content: center;
    align-items: flex-start;
    cursor: pointer;
 `;
 
-const ProjectTextBox = styled.div`
+const ProjectTextBox = styled.div<IDirection>`
    display: flex;
    flex-direction: column;
    justify-content: center;
    gap: 1rem;
    width: calc(100vw / 5 * 1.2);
-   padding-top: 2rem;
-   padding-left: 6rem;
+   padding: 2rem 0;
+   padding-left: ${({ invert }) => (invert ? '0' : '6rem')};
+   padding-right: ${({ invert }) => (invert ? '6rem' : '0')};
 `;
 
 const ProjectImageBox = styled.div`

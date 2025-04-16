@@ -1,4 +1,4 @@
-import { Singleton } from '@/Shared/Helpers/Singleton';
+import { Singleton } from '@/Shared/System/Singleton';
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { NextRequest } from 'next/server';
@@ -33,20 +33,12 @@ export class InternationalizationContext extends Singleton<InternationalizationC
       }
    }
 
-   public getDefaultLocale(): string {
-      return this._config.getDefaultLocale();
-   }
-
-   public getLocales(): readonly string[] {
-      return this._config.getLocales();
-   }
-
    public getCurrentLocale(request: NextRequest): string | undefined {
       // Negotiator expects plain object so we need to transform headers
       const negotiatorHeaders: Record<string, string> = {};
       request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
-      const locales: string[] = this.getLocales() as string[];
+      const locales: string[] = this._config.getLocales() as string[];
 
       // Use negotiator and intl-localematcher to get best locale
       let languages = new Negotiator({ headers: negotiatorHeaders }).languages(locales);
@@ -60,7 +52,7 @@ export class InternationalizationContext extends Singleton<InternationalizationC
    }
 
    public async getDictionary(locale?: string): Promise<Dictionary> {
-      const resolvedLocale = locale ?? this.getDefaultLocale();
+      const resolvedLocale = locale ?? this._config.getDefaultLocale();
 
       if (!this.isLocaleSupported(resolvedLocale)) {
          throw new Error(`Locale ${resolvedLocale} is not supported`);

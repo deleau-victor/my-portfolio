@@ -1,4 +1,3 @@
-import 'server-only';
 import { InternationalizationConfig } from './Infrastructure/Internationalization/InternationalizationConfig';
 
 type AppSettings = Awaited<ReturnType<typeof AppBootstrap.initialize>>;
@@ -11,7 +10,6 @@ export class AppBootstrap {
       if (this._initialized) return;
       const settingsModule = await import('./appSettings.json');
       const settings = settingsModule.default;
-      console.log('settings.Internationalization:', settings.Internationalization);
       this._settings = settings;
 
       // Instanciation

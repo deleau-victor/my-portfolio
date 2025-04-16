@@ -1,4 +1,4 @@
-import { Singleton } from '@/Shared/Helpers/Singleton';
+import { Singleton } from '@/Shared/System/Singleton';
 
 export interface IInternationalizationConfig {
    DefaultLocale: string;

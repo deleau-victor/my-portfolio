@@ -2,19 +2,19 @@ import { FC, memo, PropsWithChildren } from 'react';
 import TransformOnHoverElement, { IAnimatedOnHoverElementProps } from './TransformOnHoverElement';
 
 interface IScaleAndRotateProps extends IAnimatedOnHoverElementProps {
-   reverse?: boolean;
+   invert?: boolean;
 }
 
 const ScaleAndRotateElement: FC<PropsWithChildren<IScaleAndRotateProps>> = ({
    children,
-   reverse,
+   invert,
    isTrigerred
 }) => {
    return (
       <TransformOnHoverElement
          baseProperties={{ transform: 'scale(1) rotate(0deg)' }}
          onHoverProperties={{
-            transform: reverse ? 'scale(1.1) rotate(2deg)' : 'scale(1.1) rotate(-2deg)'
+            transform: invert ? 'scale(1.1) rotate(2deg)' : 'scale(1.1) rotate(-2deg)'
          }}
          isTrigerred={isTrigerred}
       >

@@ -1,4 +1,4 @@
-import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
+import { ISvgProps } from '@/Shared/Types/ISvgProps';
 
 const SheetIcon = (props: ISvgProps) => (
    <svg xmlns="http://www.w3.org/2000/svg" id="Calque_1" viewBox="0 0 64 64" {...props}>

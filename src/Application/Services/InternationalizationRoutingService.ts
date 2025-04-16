@@ -1,11 +1,14 @@
+import { InternationalizationConfig } from '@/Infrastructure/Internationalization/InternationalizationConfig';
 import { InternationalizationContext } from '@/Infrastructure/Internationalization/InternationalizationContext';
 import { NextRequest, NextResponse } from 'next/server';
 
 export class InternationalizationRoutingService {
    private readonly _context: InternationalizationContext;
+   private readonly _config: InternationalizationConfig;
 
    constructor() {
       this._context = InternationalizationContext.getInstance();
+      this._config = InternationalizationConfig.getInstance();
    }
 
    public HandleRequest(request: NextRequest): NextResponse | undefined {
@@ -13,7 +16,7 @@ export class InternationalizationRoutingService {
       const cookieLocale = this.GetCookieLocale(request);
       const pathnameLocale = pathname.split('/')[1];
 
-      const pathnameIsMissingLocale = this._context
+      const pathnameIsMissingLocale = this._config
          .getLocales()
          .every((locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`);
 
@@ -31,7 +34,7 @@ export class InternationalizationRoutingService {
          const fallback =
             cookieLocale ||
             this._context.getCurrentLocale(request) ||
-            this._context.getDefaultLocale();
+            this._config.getDefaultLocale();
          return NextResponse.redirect(new URL(`/${fallback}${pathname}`, request.url), {
             headers: {
                'Set-Cookie': `NEXT_LOCALE=${fallback}; Path=/; HttpOnly; SameSite=Lax; Max-Age=31536000`

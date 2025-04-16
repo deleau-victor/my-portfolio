@@ -1,4 +1,4 @@
-import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
+import { ISvgProps } from '@/Shared/Types/ISvgProps';
 
 const PhoneIcon = (props: ISvgProps) => (
    <svg

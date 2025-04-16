@@ -1,19 +1,19 @@
 'use client';
 import ScaleAndRotate from '@/Presentation/Components/Generics/TransformOnHoverElement/ScaleAndRotate';
-import { ISvgProps } from '@/Shared/Helpers/ISvgProps';
+import { ISvgProps } from '@/Shared/Types/ISvgProps';
 import { FC, PropsWithChildren } from 'react';
 import { CtoLinkElement } from './CtoLink.styled';
 
 interface CtoLinkProps {
    link: string;
    Icon: FC<ISvgProps>;
-   reverse?: boolean;
+   invert: boolean;
 }
 
-const CtoLink: FC<PropsWithChildren<CtoLinkProps>> = ({ children, link, Icon, reverse }) => {
+const CtoLink: FC<PropsWithChildren<CtoLinkProps>> = ({ children, link, Icon, invert }) => {
    return (
       <CtoLinkElement href={link} target="_blank">
-         <ScaleAndRotate reverse={reverse}>
+         <ScaleAndRotate invert={invert}>
             <Icon width={32} height={32} />
             {children}
          </ScaleAndRotate>

@@ -1,4 +1,4 @@
-export interface Gradient {
+export interface IGradient {
    color: string;
    percentage: number;
 }

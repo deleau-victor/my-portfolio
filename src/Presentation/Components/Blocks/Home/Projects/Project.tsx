@@ -23,10 +23,10 @@ type MockupType = 'Mobile' | 'Desktop';
 
 interface ProjectProps {
    project: Dictionary['Projects'][0];
-   reverse?: boolean;
+   invert?: boolean;
 }
 
-const Project: FC<ProjectProps> = ({ project, reverse }) => {
+const Project: FC<ProjectProps> = ({ project, invert }) => {
    const [isHovered, setIsHovered] = useState(false);
 
    const getMockupSize = (type: MockupType): { width: number; height: number } => {
@@ -45,7 +45,7 @@ const Project: FC<ProjectProps> = ({ project, reverse }) => {
          case 'Mobile':
             return { translateX: 65, translateY: 200 };
          case 'Desktop':
-            return { translateX: reverse ? 175 : 120, translateY: 80 };
+            return { translateX: invert ? 175 : 120, translateY: 80 };
          default:
             return { translateX: 0, translateY: 0 };
       }
@@ -66,10 +66,10 @@ const Project: FC<ProjectProps> = ({ project, reverse }) => {
             href={project.Name}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            reverse={reverse}
+            invert={invert}
          >
             <ProjectImageBox>
-               <ScaleAndRotate isTrigerred={isHovered}>
+               <ScaleAndRotate invert={invert} isTrigerred={isHovered}>
                   <BlurredLight
                      size={120}
                      color={project.Color}
@@ -83,7 +83,7 @@ const Project: FC<ProjectProps> = ({ project, reverse }) => {
                   />
                </ScaleAndRotate>
             </ProjectImageBox>
-            <ProjectTextBox>
+            <ProjectTextBox invert={invert}>
                <ProjectTitle color="#6b47e3">{project.Name}</ProjectTitle>
                <ProjectDescription>{project.Intro}</ProjectDescription>
                <ProjectTag>{project.Tags}</ProjectTag>

@@ -1,5 +1,6 @@
 import { AppBootstrap } from '@/AppBootstrap';
 import Navbar from '@/Presentation/Components/Navigation/Navbar/Navbar';
+import EmotionServerProvider from '@/Presentation/Provider/EmotionServerProvider';
 import type { Metadata } from 'next';
 import '../Presentation/Styles/fonts.css';
 import '../Presentation/Styles/index.css';
@@ -17,10 +18,12 @@ export default async function RootLayout({
    await AppBootstrap.initialize();
    return (
       <html lang="en">
-         <body>
-            <Navbar />
-            {children}
-         </body>
+         <EmotionServerProvider>
+            <body>
+               <Navbar />
+               {children}
+            </body>
+         </EmotionServerProvider>
       </html>
    );
 }

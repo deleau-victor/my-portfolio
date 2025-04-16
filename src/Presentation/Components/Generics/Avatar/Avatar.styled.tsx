@@ -1,9 +1,9 @@
-import { Gradient } from '@/Shared/Graphics/Gradient';
+import { IGradient } from '@/Shared/Types/IGradient';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
 type AvatarContainerProps = {
-   gradient: Gradient[];
+   gradient: IGradient[];
 };
 
 const AvatarContainer = styled.div<AvatarContainerProps>`
